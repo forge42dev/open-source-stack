@@ -24,11 +24,11 @@ Full starter stack to develop CJS/ESM compatible packages with TypeScript, Vites
 
 1. Use this template to create a new repository.
 2. Clone the repository.
-3. Install the dependencies with `npm install`.
-4. Change the package name in `package.json`.
-5. Change the `repository`, `bugs`, and `homepage` fields in `package.json` to your github repo.
-6. Change the license if required.
-7. Change the `open-source-stack` dependency in your test-apps to your name
+3. Change the package name in `package.json`.
+4. Change the `open-source-stack` dependency in your test-apps to your name
+5. Install the dependencies with `npm install`.
+6. Change the `repository`, `bugs`, and `homepage` fields in `package.json` to your github repo.
+7. Change the license if required.
 8. Add the NPM_TOKEN secret to your GitHub repository.
 9. Start coding!
 
