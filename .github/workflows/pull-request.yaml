@@ -64,9 +64,6 @@ jobs:
         with:
           useLockFile: false
 
-      - name: Install dotenv cli
-        run: npm install -g dotenv-cli
-
       - name: ⚡ Run vitest
         run: npm run test:cov
 
