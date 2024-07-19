@@ -1,4 +1,4 @@
-name: Publish Any Commit
+name: 🚀 pkg-pr-new
 on: [push, pull_request]
 
 jobs:
