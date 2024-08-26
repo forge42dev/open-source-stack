@@ -37,7 +37,8 @@
 		"check:fix": "biome check --fix .",
 		"typecheck": "tsc",
 		"validate": "npm run check && npm run tsc && npm run test",
-		"check:exports": "attw --pack ."
+		"check:exports": "attw --pack .",
+		"local-release": "changeset version && changeset publish"
 	},
 	"author": "",
 	"license": "MIT",
@@ -59,6 +60,7 @@
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.15.4",
 		"@biomejs/biome": "^1.8.3",
+		"@changesets/cli": "^2.27.7",
 		"@types/node": "^20.12.7",
 		"@vitest/coverage-v8": "^1.5.2",
 		"happy-dom": "^14.7.1",
