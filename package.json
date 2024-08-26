@@ -6,27 +6,28 @@
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.mts",
 	"exports": {
+		"./package.json": "./package.json",
 		".": {
 			"import": {
+				"types": "./dist/index.d.mts",
 				"import": "./dist/index.mjs",
-				"default": "./dist/index.mjs",
-				"types": "./dist/index.d.mts"
+				"default": "./dist/index.mjs"
 			},
 			"require": {
+				"types": "./dist/index.d.ts",
 				"import": "./dist/index.js",
-				"require": "./dist/index.js",
-				"default": "./dist/index.js",
-				"types": "./dist/index.d.ts"
+				"require": "./dist/index.js"
 			}
 		}
 	},
 	"scripts": {
 		"test": "vitest run",
 		"test:cov": "vitest run --coverage",
-		"build": "tsup src/index.ts  --dts --format esm,cjs --outDir dist --minify --clean",
+		"postbuild": "npm run check:exports",
+		"build": "tsup src/index.ts --config tsup.config.ts",
 		"remix:dev": "npm run dev -w test-apps/remix-vite",
 		"remix:cjs:dev": "npm run dev -w test-apps/remix-vite-cjs",
-		"build:dev": "tsup src/index.ts --dts --format cjs,esm  --outDir dist",
+		"build:dev": "tsup src/index.ts --config tsup.dev.config.ts",
 		"build:dev:watch": "npm run build:dev -- --watch",
 		"build:dev:cjs:watch": "npm run build:dev -- --watch",
 		"dev": "npm-run-all -s build:dev -p remix:dev build:dev:watch",
@@ -35,10 +36,11 @@
 		"check": "biome check .",
 		"check:fix": "biome check --fix .",
 		"typecheck": "tsc",
-		"validate": "npm run check && npm run tsc && npm run test"
+		"validate": "npm run check && npm run tsc && npm run test",
+		"check:exports": "attw --pack ."
 	},
 	"author": "",
-	"license": "ISC",
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/forge42dev/open-source-stack.git"
@@ -46,10 +48,16 @@
 	"bugs": {
 		"url": "https://github.com/forge42dev/open-source-stack/issues"
 	},
-	"files": ["dist"],
-	"workspaces": [".", "test-apps/*"],
+	"files": [
+		"dist"
+	],
+	"workspaces": [
+		".",
+		"test-apps/*"
+	],
 	"homepage": "https://github.com/forge42dev/open-source-stack#readme",
 	"devDependencies": {
+		"@arethetypeswrong/cli": "^0.15.4",
 		"@biomejs/biome": "^1.8.3",
 		"@types/node": "^20.12.7",
 		"@vitest/coverage-v8": "^1.5.2",
@@ -61,13 +69,16 @@
 		"vitest": "^1.5.2"
 	},
 	"optionalDependencies": {
+		"@rollup/rollup-darwin-x64-gnu": "4.18.1",
+		"@rollup/rollup-darwin-x64-musl": "4.18.1",
+		"@rollup/rollup-linux-arm64-gnu": "4.18.1",
 		"@rollup/rollup-linux-x64-gnu": "^4.18.1",
 		"@rollup/rollup-linux-x64-musl": "^4.18.1",
 		"@rollup/rollup-win32-arm64-msvc": "4.18.1",
 		"@rollup/rollup-win32-x64-msvc": "4.18.1",
-		"@rollup/rollup-win32-x64-musl": "4.18.1",
-		"@rollup/rollup-darwin-x64-gnu": "4.18.1",
-		"@rollup/rollup-darwin-x64-musl": "4.18.1",
-		"@rollup/rollup-linux-arm64-gnu": "4.18.1"
+		"@rollup/rollup-win32-x64-musl": "4.18.1"
+	},
+	"engines": {
+		"node": ">=20.0.0"
 	}
 }
