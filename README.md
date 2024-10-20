@@ -9,6 +9,8 @@
 
 Full starter stack to develop CJS/ESM compatible npm packages with TypeScript, Vitest, ESLint, Prettier, and GitHub Actions.
 
+Detailed overview of the stastack:
+https://youtu.be/ABRpwxLdGho
 
 Deploy your open-source project to npm with ease, with fully covered bundling, testing, linting and deployment setup out of the box,
 don't worry about CJS or ESM, bundling your typescript definitions or anything else, focus on coding out your solution and let the stack take care of the rest.
