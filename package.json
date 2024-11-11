@@ -49,13 +49,8 @@
 	"bugs": {
 		"url": "https://github.com/forge42dev/open-source-stack/issues"
 	},
-	"files": [
-		"dist"
-	],
-	"workspaces": [
-		".",
-		"test-apps/*"
-	],
+	"files": ["dist"],
+	"workspaces": [".", "test-apps/*"],
 	"homepage": "https://github.com/forge42dev/open-source-stack#readme",
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.15.4",
