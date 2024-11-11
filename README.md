@@ -3,9 +3,9 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/forge42dev/open-source-stack?style=social)
 ![npm](https://img.shields.io/npm/v/open-source-stack?style=plastic)
 ![GitHub](https://img.shields.io/github/license/forge42dev/open-source-stack?style=plastic)
-![npm](https://img.shields.io/npm/dy/open-source-stack?style=plastic) 
-![npm](https://img.shields.io/npm/dw/open-source-stack?style=plastic) 
-![GitHub top language](https://img.shields.io/github/languages/top/forge42dev/open-source-stack?style=plastic) 
+![npm](https://img.shields.io/npm/dy/open-source-stack?style=plastic)
+![npm](https://img.shields.io/npm/dw/open-source-stack?style=plastic)
+![GitHub top language](https://img.shields.io/github/languages/top/forge42dev/open-source-stack?style=plastic)
 
 Full starter stack to develop CJS/ESM compatible npm packages with TypeScript, Vitest, ESLint, Prettier, and GitHub Actions.
 
@@ -21,8 +21,7 @@ Build your own open-source project today! 🚀
 
 - **TypeScript**: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 - **Vitest**: A modern test runner built on top of Vite.
-- **ESLint**: ESLint statically analyzes your code to quickly find problems.
-- **Prettier**: Prettier is an opinionated code formatter.
+- **Biome**: Biome statically analyzes your code to find issues and formats your code with a consistent, opinionated style.
 - **GitHub Actions**: Automate your workflow from idea to production.
 - **tsup** - Zero-config bundler for tiny TypeScript libraries.
 
@@ -54,4 +53,3 @@ Build your own open-source project today! 🚀
 - `npm run lint` - Lint the code.
 - `npm run dev` - Start the package and ESM test app in watch mode for development.
 - `npm run dev:cjs` - Start the package and CJS test app in watch mode for development.
-
