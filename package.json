@@ -1,6 +1,6 @@
 {
 	"name": "open-source-stack",
-	"version": "1.0.1",
+	"version": "1.0.0",
 	"description": "Minimal open-source stack to help you ship an open-source package in TS",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
