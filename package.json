@@ -54,7 +54,7 @@
 	"homepage": "https://github.com/forge42dev/open-source-stack#readme",
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.15.4",
-		"@biomejs/biome": "^1.8.3",
+		"@biomejs/biome": "^1.9.4",
 		"@changesets/cli": "^2.27.7",
 		"@types/node": "^20.12.7",
 		"@vitest/coverage-v8": "^1.5.2",
